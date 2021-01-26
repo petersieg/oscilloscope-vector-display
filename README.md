@@ -7,7 +7,7 @@ __Building Library__
 
 \# Install ALSA development package
 
-sudo apt-get install asound2-dev
+sudo apt-get install libasound2-dev
 
 git clone https://github.com/tedyapo/oscilloscope-vector-display.git
 
@@ -42,3 +42,11 @@ __Running Example__
 \# aplay -L will list available devices
 
 ![example image](/doc/images/DS1054Z.jpg)
+
+---
+
+Pictures on analog Hameg Oscilloscope:
+
+wrencher:
+
+![wrencher](wrencher.jpg)
