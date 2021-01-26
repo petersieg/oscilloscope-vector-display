@@ -45,8 +45,23 @@ __Running Example__
 
 ---
 
-Pictures on analog Hameg Oscilloscope:
+Pictures on analog Hameg Oscilloscope (not so good pictures as on rigol):
 
 wrencher:
 
 ![wrencher](wrencher.jpg)
+
+Bouncing balls:
+
+![balls](balls.jpg)
+
+Geometric figures:
+
+![figures](figures.jpg)
+
+Asteroids (steering is TOO FAST; no collision detection between ship and rocks):
+
+![astro](astro.jpg)
+
+
+
