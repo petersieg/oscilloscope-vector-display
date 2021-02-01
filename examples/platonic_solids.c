@@ -294,7 +294,8 @@ int main(int argc, char *argv[])
   v3f angle = {0.f, 0.f, 0.f};
   v3f dangle = {0.01f, 0.03f, 0.0001f};
   v3f viewpoint = {0.f, 0.f, -3.f};
-  float r = 0.3f;
+  //float r = 0.3f;
+  float r = 0.6f;
   int type_idx = 0;
 
   uint32_t update_count = 0;

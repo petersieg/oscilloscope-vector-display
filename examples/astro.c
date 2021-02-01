@@ -102,21 +102,27 @@ int main(int argc, char* argv[])
         /* horizontal */
         if (event.jaxis.axis == 0){
           if (event.jaxis.value < 0){
-            ship.ang = fmodf(ship.ang + PI/12, 2*PI);
+            //ship.ang = fmodf(ship.ang + PI/12, 2*PI);
+            ship.ang = fmodf(ship.ang + PI/64, 2*PI);
           }
           if (event.jaxis.value > 0){
-            ship.ang = fmodf(ship.ang - PI/12, 2*PI);
+            //ship.ang = fmodf(ship.ang - PI/12, 2*PI);
+            ship.ang = fmodf(ship.ang - PI/64, 2*PI);
           }
         }
         /* vertical */
         if (event.jaxis.axis == 1){
           if (event.jaxis.value < 0){
-            ship.pvel.x += 0.001*cosf(ship.ang);
-            ship.pvel.y += 0.001*sinf(ship.ang);
+            //ship.pvel.x += 0.001*cosf(ship.ang);
+            //ship.pvel.y += 0.001*sinf(ship.ang);
+            ship.pvel.x += 0.0001*cosf(ship.ang);
+            ship.pvel.y += 0.0001*sinf(ship.ang);
           }
           if (event.jaxis.value > 0){
-            ship.pvel.x -= 0.001*cosf(ship.ang);
-            ship.pvel.y -= 0.001*sinf(ship.ang);
+            //ship.pvel.x -= 0.001*cosf(ship.ang);
+            //ship.pvel.y -= 0.001*sinf(ship.ang);
+            ship.pvel.x -= 0.0001*cosf(ship.ang);
+            ship.pvel.y -= 0.0001*sinf(ship.ang);
           }
         }
         break;
