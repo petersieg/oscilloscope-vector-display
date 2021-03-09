@@ -278,7 +278,7 @@ int main(int argc, char *argv[])
 
   /* set the display parameters and initialize the display */
   display_params.pcm_device = "default";
-  display_params.frame_rate = 60;
+  display_params.frame_rate = 30; //60;
   display_params.sample_rate = 48000;
   display_params.slew = 100;
   display_params.ac_coupling = 0;
@@ -301,8 +301,9 @@ int main(int argc, char *argv[])
   uint32_t update_count = 0;
   uint32_t bounce_count = 0;
   float fps = 0.f;
-  while(1){
-
+  int count = 0;
+  while(count < 2000){
+    count++;
     /* initialize a display list */
     DisplayList dl;
     InitDisplayList(&dl);
@@ -363,9 +364,9 @@ int main(int argc, char *argv[])
 
     render_polyhedron(&dl, &polyhedra[type_idx], &pos, r, &angle, &viewpoint);
 
-    char message[20];
-    snprintf(message, 20, "%4.1f FPS", fps);
-    render_text(&dl, message, -1.f, -1.f, 0.3, 0.1, 0.2, 20);
+    //char message[20];
+    //snprintf(message, 20, "%4.1f FPS", fps);
+    //render_text(&dl, message, -1.f, -1.f, 0.3, 0.1, 0.2, 20);
 
     /* update the display, and free the display list */
     int limit_fps = 1;

@@ -107,8 +107,9 @@ int main(int argc, char *argv[])
   fprintf(stderr, "%f %f %f\n", sumx, sumy, scale);
 
   uint32_t update_count = 0;
-  while(1){
-
+  count=0;
+  while(count < 2000){
+    count++;
     /* initialize a display list */
     DisplayList dl;
     InitDisplayList(&dl);

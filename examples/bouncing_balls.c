@@ -179,8 +179,9 @@ int main(int argc, char *argv[])
 
   float dt = 1.; /* simulation timestep */
   uint32_t update_count = 0;
-  while(1){
-
+  int count = 0;
+  while(count < 2000){
+    count++;
     update_positions(balls, n_balls, dt);
 
     /* initialize a display list */
