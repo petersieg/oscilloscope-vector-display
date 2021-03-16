@@ -89,6 +89,7 @@ int main(int argc, char* argv[])
 
   SDL_Event event;
   int quit_flag = 0;
+  int strike_count = 0;
   uint32_t update_count = 0;
   float x = 0;
   float y = 0;
@@ -196,7 +197,8 @@ int main(int argc, char* argv[])
     for (int i=0; i<n_rocks; ++i){
       DLO_collision coll = DLO_intersect_DLO(&rocks[i], &ship);
       if (coll.detected){
-        //quit_flag = 1;
+        strike_count++;
+        if (strike_count > 20) quit_flag = 1;
       }
     }
 
@@ -238,6 +240,8 @@ int main(int argc, char* argv[])
     }
 
     /* draw ship */
+    DLO_render(&dl, &ship, 50);
+    /* draw ship 2nd to illuminate stronger */
     DLO_render(&dl, &ship, 50);
 
     /* draw rocks */
